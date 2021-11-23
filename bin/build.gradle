@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    reports {
+        junitXml.enabled = true
+        html.enabled = true
+    }
+}
+
+dependencies {
+  testImplementation 'junit:junit:4.12'
+}
+
+mainClassName = 'example.Main'
